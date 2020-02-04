@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste</title>
+    <style>
+        /*div#square{
+            width: 100px; 
+            height: 100px;
+            background: red;
+        }*/
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button id="btnCreate" onclick="create()">New Element</button>
+    </div>
+    
+    
+    <script>   
+        var criaBotao = document.querySelector('button#btnCreate');
+        function create() {
+            var newElement = document.createElement('input');
+            var at = document.createAttribute("style");
+            at.value="background-color: red; width: 100px; height: 100px; margin: 5px";
+            newElement.setAttributeNode(at)
+            document.body.appendChild(newElement);
+        }
+    </script>
+</body>
+</html>
+
+
